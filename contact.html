@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Flecto</title>
+  <meta name="description" content="Contact Flecto — get in touch for advertising, deal submissions, or general enquiries."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://flecto.shop/contact.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--orange:#f03f00;--text:#111;--muted:#555;--border:#e4e4e4;--bg:#f5f5f5;--white:#fff;--font:'Plus Jakarta Sans',sans-serif}
+    body{background:var(--bg);color:var(--text);font-family:var(--font);line-height:1.7}
+    .topbar{background:rgba(255,255,255,0.97);border-bottom:1px solid var(--border);padding:0 2rem;height:62px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
+    .brand{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
+    .brand-mark{width:34px;height:34px;border-radius:9px;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:1rem}
+    .brand-name{font-size:1.05rem;font-weight:800;color:var(--text);letter-spacing:-0.03em}
+    .brand-name span{color:var(--orange)}
+    .back-btn{padding:0.42rem 0.9rem;border-radius:20px;background:var(--bg);border:1px solid var(--border);font-size:0.78rem;font-weight:600;color:var(--muted);text-decoration:none}
+    .page-wrap{max-width:680px;margin:0 auto;padding:3rem 1.5rem 5rem}
+    .page-tag{font-size:0.7rem;font-weight:700;color:var(--orange);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem}
+    h1{font-size:2rem;font-weight:800;letter-spacing:-0.04em;margin-bottom:0.5rem}
+    .sub{font-size:0.9rem;color:var(--muted);font-weight:500;margin-bottom:2.5rem}
+    .contact-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem}
+    @media(max-width:500px){.contact-cards{grid-template-columns:1fr}}
+    .contact-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.4rem}
+    .cc-icon{font-size:1.6rem;margin-bottom:0.6rem}
+    .cc-title{font-size:0.9rem;font-weight:800;margin-bottom:0.3rem}
+    .cc-desc{font-size:0.78rem;color:var(--muted);font-weight:500;margin-bottom:0.7rem;line-height:1.55}
+    .cc-btn{display:inline-block;padding:0.45rem 1rem;border-radius:20px;background:var(--orange);color:#fff;font-size:0.75rem;font-weight:700;text-decoration:none;transition:all 0.2s}
+    .cc-btn:hover{background:#d03500}
+    .form-wrap{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.8rem}
+    .form-wrap h2{font-size:1.05rem;font-weight:800;margin-bottom:1.2rem}
+    .field{display:flex;flex-direction:column;gap:0.3rem;margin-bottom:1rem}
+    .fl{font-size:0.72rem;font-weight:700;color:var(--muted)}
+    .fi{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;color:var(--text);font-family:var(--font);font-size:0.85rem;font-weight:500;padding:0.65rem 0.9rem;outline:none;transition:border-color 0.2s;width:100%}
+    .fi:focus{border-color:var(--orange)}
+    textarea.fi{min-height:110px;resize:vertical}
+    .submit-btn{width:100%;padding:0.85rem;border-radius:12px;border:none;background:var(--orange);color:#fff;font-family:var(--font);font-size:0.9rem;font-weight:700;cursor:pointer;transition:all 0.2s}
+    .submit-btn:hover{background:#d03500;transform:translateY(-1px)}
+    footer{background:#0d0d0d;padding:1.5rem 2rem;text-align:center;font-size:0.72rem;color:rgba(255,255,255,0.4)}
+    footer strong{color:#ff5722}
+    footer a{color:rgba(255,255,255,0.5);text-decoration:none;margin:0 0.5rem}
+  </style>
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="/"><div class="brand-mark">F</div><div class="brand-name">flecto<span>.shop</span></div></a>
+  <a class="back-btn" href="/">← Back to Flecto</a>
+</nav>
+<div class="page-wrap">
+  <div class="page-tag">Contact</div>
+  <h1>Get in Touch</h1>
+  <p class="sub">We would love to hear from you. Reach out for advertising, deal submissions, or general enquiries.</p>
+
+  <div class="contact-cards">
+    <div class="contact-card">
+      <div class="cc-icon">📢</div>
+      <div class="cc-title">Advertise</div>
+      <div class="cc-desc">Feature your brand or product on Flecto and reach thousands of visitors.</div>
+      <a class="cc-btn" href="mailto:hello@flecto.shop">Get in Touch</a>
+    </div>
+    <div class="contact-card" id="submit">
+      <div class="cc-icon">🏷️</div>
+      <div class="cc-title">Submit a Deal</div>
+      <div class="cc-desc">Have a discount code or deal you want listed? Submit it for review.</div>
+      <a class="cc-btn" href="mailto:deals@flecto.shop">Submit Deal</a>
+    </div>
+    <div class="contact-card">
+      <div class="cc-icon">🔧</div>
+      <div class="cc-title">Suggest a Tool</div>
+      <div class="cc-desc">Know a free tool that should be on Flecto? Tell us about it.</div>
+      <a class="cc-btn" href="mailto:hello@flecto.shop">Suggest</a>
+    </div>
+    <div class="contact-card">
+      <div class="cc-icon">💬</div>
+      <div class="cc-title">General</div>
+      <div class="cc-desc">Any other questions, feedback or ideas. We read every message.</div>
+      <a class="cc-btn" href="https://github.com/byshak" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <div class="form-wrap">
+    <h2>Send a Message</h2>
+    <div class="field"><span class="fl">Your Name</span><input class="fi" id="cName" placeholder="Your name"/></div>
+    <div class="field"><span class="fl">Email Address</span><input class="fi" id="cEmail" type="email" placeholder="your@email.com"/></div>
+    <div class="field"><span class="fl">Subject</span>
+      <select class="fi" id="cSubject">
+        <option>General Enquiry</option>
+        <option>Advertising</option>
+        <option>Submit a Deal</option>
+        <option>Suggest a Tool</option>
+        <option>Privacy Request</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="field"><span class="fl">Message</span><textarea class="fi" id="cMsg" placeholder="Your message..."></textarea></div>
+    <button class="submit-btn" onclick="sendMsg()">Send Message →</button>
+  </div>
+</div>
+<footer>© 2026 <strong>Flecto</strong> · <a href="index.html">Home</a><a href="privacy-policy.html">Privacy</a><a href="terms.html">Terms</a><a href="about.html">About</a></footer>
+<script>
+function sendMsg(){
+  const name=document.getElementById('cName').value.trim();
+  const email=document.getElementById('cEmail').value.trim();
+  const subject=document.getElementById('cSubject').value;
+  const msg=document.getElementById('cMsg').value.trim();
+  if(!name||!email||!msg){alert('Please fill in all fields.');return;}
+  window.location.href=`mailto:hello@flecto.shop?subject=Flecto: ${encodeURIComponent(subject)} from ${encodeURIComponent(name)}&body=${encodeURIComponent(msg+'\n\nFrom: '+name+'\nEmail: '+email)}`;
+}
+</script>
+</body>
+</html>

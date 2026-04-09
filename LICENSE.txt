@@ -1,0 +1,49 @@
+PROPRIETARY SOFTWARE LICENSE
+
+Flecto — Free Tools Hub & Deals Finder
+Website: https://flecto.shop
+Copyright (c) 2026 Flecto by G. Shakeel. All rights reserved.
+Created by G. Shakeel, United Kingdom.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+OWNERSHIP
+---------
+This software, including all source code, design, content, branding,
+legal pages, SEO structure, and associated files (collectively "the
+Software"), is the exclusive intellectual property of G. Shakeel
+(trading as Flecto), protected under the Copyright, Designs and
+Patents Act 1988 (United Kingdom) and applicable international
+copyright law.
+
+RESTRICTIONS
+------------
+You may NOT, without prior written permission from the owner:
+
+  1. Copy, reproduce, or duplicate the Software or any part of it.
+  2. Modify, adapt, or create derivative works based on it.
+  3. Distribute, publish, sublicense, sell, or transfer the Software.
+  4. Use this codebase to build a competing tools hub or deals site.
+  5. Remove or alter any copyright, trademark, or proprietary notices.
+  6. Reverse-engineer or disassemble the Software.
+
+PERMITTED USE
+-------------
+Viewing this repository on GitHub for personal, non-commercial
+reference only is permitted. No other rights are granted.
+
+COMMERCIAL LICENSING
+--------------------
+For licensing enquiries, advertising partnerships, or permissions:
+Contact: https://flecto.shop/contact.html
+GitHub:  https://github.com/byshak
+
+NO WARRANTY
+-----------
+This Software is provided as-is. The owner accepts no liability for
+decisions made based on tool outputs or deal listings.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+© 2026 Flecto by G. Shakeel. All rights reserved.
+https://flecto.shop
