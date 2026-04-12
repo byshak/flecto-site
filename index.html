@@ -407,6 +407,55 @@
     @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
     @media(max-width:700px){section[aria-label] .grid-3{grid-template-columns:1fr!important} section[aria-label] .grid-2{grid-template-columns:1fr!important}}
     @media(max-width:700px){div[style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important;} div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}}
+
+    /* ── 3D FLOATING CARDS ── */
+    .floating-cards{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+    .float-card{position:absolute;background:rgba(255,255,255,0.92);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.95);border-radius:12px;padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.5rem;font-size:0.72rem;font-weight:700;color:var(--text);box-shadow:0 8px 32px rgba(0,0,0,0.1),0 2px 8px rgba(0,0,0,0.06);animation:cardFloat3d ease-in-out infinite;white-space:nowrap;}
+    .float-card .fc-icon{font-size:1rem;}
+    .float-card .fc-val{font-size:0.82rem;font-weight:800;color:var(--orange);}
+    .fc1{top:15%;left:2%;animation-duration:6s;animation-delay:0s;}
+    .fc2{top:22%;right:2%;animation-duration:7s;animation-delay:-2s;}
+    .fc3{bottom:30%;left:3%;animation-duration:8s;animation-delay:-4s;}
+    .fc4{bottom:20%;right:3%;animation-duration:6.5s;animation-delay:-1s;}
+    @media(max-width:768px){.float-card{display:none}}
+    @keyframes cardFloat3d{0%{transform:translateY(0) rotate(-1deg) scale(1);}40%{transform:translateY(-16px) rotate(1deg) scale(1.02);}70%{transform:translateY(-6px) rotate(-0.5deg) scale(0.99);}100%{transform:translateY(0) rotate(-1deg) scale(1);}}
+
+    /* ── 3D HOVER on tool cards ── */
+    .tool-card{transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)!important;position:relative;overflow:hidden;}
+    .tool-card::before{content:'';position:absolute;inset:0;border-radius:var(--radius);background:linear-gradient(135deg,rgba(240,63,0,0.04) 0%,transparent 60%);opacity:0;transition:opacity 0.3s;}
+    .tool-card:hover::before{opacity:1;}
+    .tool-card:hover{border-color:var(--orange-border)!important;transform:translateY(-8px) rotateX(3deg) scale(1.02)!important;box-shadow:0 20px 40px rgba(240,63,0,0.12),0 8px 16px rgba(0,0,0,0.08)!important;}
+
+    /* ── 3D hover on deal cards ── */
+    .deal-card{transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)!important;}
+    .deal-card:hover{border-color:var(--orange-border)!important;transform:translateY(-8px) rotateX(2deg)!important;box-shadow:0 20px 40px rgba(240,63,0,0.1),0 8px 20px rgba(0,0,0,0.08)!important;}
+
+    /* ── STAT gradient text ── */
+    .stat-val{background:linear-gradient(135deg,var(--orange),#ff8c00);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+    /* ── PULSE RING on search button ── */
+    .sgo{position:relative;}
+    .sgo::after{content:'';position:absolute;inset:-3px;border-radius:50px;border:2px solid var(--orange);opacity:0;animation:pulseRing 2.5s ease-out infinite;}
+    @keyframes pulseRing{0%{transform:scale(1);opacity:0.5;}100%{transform:scale(1.4);opacity:0;}}
+
+    /* ── GLOW on hero tag ── */
+    .hero-tag{box-shadow:0 0 20px rgba(240,63,0,0.12);animation:fadeUp 0.6s 0.1s ease both,tagGlow 3s ease-in-out 0.8s infinite!important;}
+    @keyframes tagGlow{0%,100%{box-shadow:0 0 10px rgba(240,63,0,0.1)}50%{box-shadow:0 0 28px rgba(240,63,0,0.28)}}
+
+    /* ── 3D cat cards ── */
+    .cat-card{transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1)!important;}
+    .cat-card:hover{border-color:var(--orange-border)!important;transform:translateY(-6px) scale(1.05) rotateZ(-1deg)!important;box-shadow:0 16px 32px rgba(240,63,0,0.1)!important;background:var(--orange-light)!important;}
+    .cat-emoji{display:block;transition:transform 0.3s;}
+    .cat-card:hover .cat-emoji{transform:scale(1.25) rotate(-8deg);}
+    .cat-card:hover .cat-name{color:var(--orange);}
+
+    /* ── shimmer tab ── */
+    .tab.active{background:linear-gradient(135deg,var(--orange),#ff6b00,var(--orange));background-size:200% auto;animation:tabShimmer 3s linear infinite;}
+    @keyframes tabShimmer{0%{background-position:0% center}100%{background-position:200% center}}
+
+    /* ── newsletter glow ── */
+    .newsletter::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(240,63,0,0.12) 0%,transparent 70%);pointer-events:none;animation:nlGlow 4s ease-in-out infinite;}
+    @keyframes nlGlow{0%,100%{opacity:0.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.2)}}
   </style>
 </head>
 <body>
@@ -430,6 +479,7 @@
     <button class="nbtn on" onclick="switchTab('tools',this)">🔧 Tools</button>
     <button class="nbtn" onclick="switchTab('deals',this)">🏷️ Deals</button>
     <a class="nbtn" href="#categories">Categories</a>
+    <a class="nbtn" href="blog.html">📝 Blog</a>
     <a class="nbtn" href="about.html">About</a>
     <a class="nav-cta" href="#newsletter">Get Deals →</a>
   </div>
@@ -439,6 +489,13 @@
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
+  <!-- Floating 3D cards -->
+  <div class="floating-cards">
+    <div class="float-card fc1"><span class="fc-icon">🧾</span><span>BillSplit Pro</span><span class="fc-val">Free</span></div>
+    <div class="float-card fc2"><span class="fc-icon">🛒</span><span>Shopify Deal</span><span class="fc-val">3 Months £1</span></div>
+    <div class="float-card fc3"><span class="fc-icon">✂️</span><span>ClipForge</span><span class="fc-val">AI · Free</span></div>
+    <div class="float-card fc4"><span class="fc-icon">🎨</span><span>Canva Pro</span><span class="fc-val">45% OFF</span></div>
+  </div>
   <div class="hero-inner">
     <div class="hero-tag"><span class="hdot"></span> FREE TOOLS · BEST DEALS · NO SIGNUP EVER</div>
     <h1>Free Online Tools &amp;<br/><span class="orange">Best Discount Codes</span></h1>
