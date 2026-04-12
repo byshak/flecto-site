@@ -16,6 +16,8 @@
   <meta name="keywords" content="free tools blog, discount codes guide, bill splitter guide, visa requirements, TikTok clip maker, free online tools tips, promo codes how to use"/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://flecto.shop/blog.html"/>
+  <link rel="icon" type="image/png" href="flecto_logo.png"/>
+  <link rel="apple-touch-icon" href="flecto_logo.png"/>
   <meta property="og:title" content="Blog — Free Tools Tips & Deals Guides | Flecto"/>
   <meta property="og:description" content="Guides on free tools, discount codes, bill splitting and more. Updated weekly."/>
   <meta property="og:url" content="https://flecto.shop/blog.html"/>
@@ -182,7 +184,7 @@
     </div>
 
     <!-- Featured Post -->
-    <a class="featured-post" href="blog/free-bill-splitter.html">
+    <a class="featured-post" href="#" onclick="showArticle('featured');return false;">
       <div class="featured-thumb">🧾</div>
       <div class="featured-body">
         <div class="featured-label">⭐ Featured Article</div>
@@ -261,7 +263,7 @@ const catLabels = {tools:'🔧 Tools',deals:'🏷️ Deals',guide:'📖 Guide',t
 
 function renderPosts(posts){
   document.getElementById('postsList').innerHTML = posts.map((p,i)=>`
-    <a class="post-card" href="${p.url}" style="animation-delay:${i*0.06}s;background:${p.bg}20">
+    <a class="post-card" href="#" onclick="showArticle(p.id);return false;" style="animation-delay:${i*0.06}s;background:${p.bg}20">
       <div class="post-thumb" style="background:${p.bg}">${p.icon}</div>
       <div class="post-content">
         <span class="post-cat ${catColors[p.cat]}">${catLabels[p.cat]}</span>
@@ -292,6 +294,184 @@ function blogSubscribe(){
 }
 
 renderPosts(POSTS);
+</script>
+
+<!-- Article Modal -->
+<div id="articleModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);z-index:500;overflow-y:auto;padding:2rem 1rem;">
+  <div style="max-width:760px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.2);">
+    <div style="background:var(--orange);padding:1.5rem;display:flex;align-items:center;justify-content:space-between;">
+      <div style="color:#fff;font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">Flecto Blog</div>
+      <button onclick="closeArticle()" style="background:rgba(255,255,255,0.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">✕</button>
+    </div>
+    <div id="articleContent" style="padding:2rem;font-family:var(--font);line-height:1.7;color:#111;"></div>
+  </div>
+</div>
+
+<script>
+const ARTICLE_CONTENT = {
+  featured: {
+    title: "10 Best Free Bill Splitter Apps in 2026 — No Signup Required",
+    icon: "🧾",
+    cat: "Tools",
+    date: "January 2026",
+    read: "8 min read",
+    body: `<p>Splitting bills with friends should be simple. But most bill splitter apps in 2026 require you to create an account, download an app, or worse — hit a paywall just to calculate who owes what.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;letter-spacing:-0.02em;">The Problem with Most Bill Splitters</h2>
+<p>Apps like Splitwise now limit free users and force 10-second ads. Tricount has had reliability issues since being acquired. Most require app downloads just to split a dinner bill.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;letter-spacing:-0.02em;">The Best Free Bill Splitters in 2026</h2>
+<p><strong>1. BillSplit Pro (byshak.github.io/billsplit)</strong> — Works entirely in your browser. No download, no signup. Add people, add expenses, choose equal or custom split. Calculates settlements automatically. Works offline. Supports 9 currencies. Completely free.</p>
+<p><strong>2. Kittysplit</strong> — Simple and clean. Good for trips. No registration needed.</p>
+<p><strong>3. Splitwise</strong> — Best for ongoing flatmate expenses but free tier now has limitations.</p>
+<p><strong>4. Billzer</strong> — Simple online calculator. No frills, works fast.</p>
+<p><strong>5. Spliito</strong> — Supports all currencies worldwide. No signup required.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;letter-spacing:-0.02em;">Our Recommendation</h2>
+<p>For quick restaurant or trip splits with no fuss — <a href="https://byshak.github.io/billsplit" style="color:var(--orange);font-weight:700;" target="_blank">BillSplit Pro</a> is the fastest option. Open it in your browser, add your group, done. No app needed.</p>`
+  },
+  1: {
+    title: "Best Shopify Discount Codes That Actually Work — Updated 2026",
+    icon: "🛒", cat: "Deals", date: "January 2026", read: "5 min read",
+    body: `<p>Finding a Shopify discount code that actually works in 2026 can be frustrating. Most coupon sites list expired codes. We verified every Shopify deal available and found the ones that genuinely work.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">Best Shopify Deals Right Now</h2>
+<p><strong>3 Months for £1</strong> — Use code <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">FLECTO3FREE</strong> at checkout. This is Shopify's best deal for new stores. You get full access to all features for just £1 per month for your first 3 months.</p>
+<p>This is perfect if you are starting a dropshipping store, selling your own products, or testing a business idea without a big upfront investment.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">How to Use the Code</h2>
+<p>1. Go to shopify.com and click Start Free Trial<br/>2. Set up your store basics<br/>3. When asked to choose a plan, enter the code at checkout<br/>4. You will pay just £1 per month for 3 months</p>
+<p>After the trial period, you can cancel or continue at the standard monthly rate. No long-term commitment required.</p>`
+  },
+  2: {
+    title: "How to Check Visa Requirements for Any Country Free in 10 Seconds",
+    icon: "✈️", cat: "Tools", date: "January 2026", read: "4 min read",
+    body: `<p>Checking visa requirements used to mean hours of research across government websites. In 2026 there is a much faster way — and it is completely free.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">VisaGuide — Free Instant Visa Checker</h2>
+<p>Our free <a href="https://byshak.github.io/visaguide" style="color:var(--orange);font-weight:700;" target="_blank">VisaGuide tool</a> covers 70+ countries. Just select your passport country and destination and it instantly shows you:</p>
+<ul style="padding-left:1.5rem;margin:0.8rem 0;">
+<li>Whether you need a visa</li>
+<li>Maximum stay allowed</li>
+<li>Processing time and cost</li>
+<li>Documents required</li>
+<li>How to apply step by step</li>
+</ul>
+<p>No signup, no account, completely free. Works on any device in your browser.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">Most Common Routes Checked</h2>
+<p>Pakistan to UK, India to USA, UK to UAE, Nigeria to Canada, Philippines to Saudi Arabia. The tool covers all of these and many more.</p>`
+  },
+  3: {
+    title: "How to Turn Long Videos into TikTok Clips — Completely Free",
+    icon: "✂️", cat: "Tools", date: "January 2026", read: "6 min read",
+    body: `<p>You recorded an amazing 2-hour podcast. But on TikTok, nobody watches more than 60 seconds. The solution: AI-powered clip cutting — and you can do it completely free.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">ClipForge — Free AI Video Clipper</h2>
+<p>Our free <a href="https://byshak.github.io/clipforge" style="color:var(--orange);font-weight:700;" target="_blank">ClipForge tool</a> uses Gemini AI to scan your video and find the most viral moments automatically. Here is how it works:</p>
+<ol style="padding-left:1.5rem;margin:0.8rem 0;">
+<li>Upload your video (drag and drop)</li>
+<li>AI analyses the content and suggests best moments with viral scores</li>
+<li>FFmpeg cuts the clips in your browser — video never leaves your device</li>
+<li>Download clips ready to post on TikTok, Reels or YouTube Shorts</li>
+</ol>
+<p>Each clip comes with an AI-written caption with hashtags. Completely free, no signup, no server upload.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">Requirements</h2>
+<p>You need a free Gemini API key from Google AI Studio (aistudio.google.com). The key is free and takes 2 minutes to get.</p>`
+  },
+  4: {
+    title: "Best Canva Pro Promo Codes 2026 — Save 45% Today",
+    icon: "🎨", cat: "Deals", date: "January 2026", read: "4 min read",
+    body: `<p>Canva Pro is worth every penny — but there is no reason to pay full price. Here are the best verified Canva discount codes working in 2026.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">Best Canva Promo Code 2026</h2>
+<p>Use code <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">CANVAFLECTO</strong> for 45% off the annual Canva Pro plan. This is the biggest discount available for new Canva Pro subscribers.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">What You Get with Canva Pro</h2>
+<ul style="padding-left:1.5rem;margin:0.8rem 0;">
+<li>100 million premium photos, videos and elements</li>
+<li>Brand Kit — save your colours, fonts and logos</li>
+<li>Background Remover — one click</li>
+<li>Magic Resize — resize designs for any platform instantly</li>
+<li>100GB cloud storage</li>
+<li>Schedule social media posts directly from Canva</li>
+</ul>
+<p>If you create any kind of content — social media posts, presentations, thumbnails, logos — Canva Pro pays for itself in saved time within the first week.</p>`
+  },
+  5: {
+    title: "Free Ad Budget Calculator — Plan Meta, TikTok and Google Ads",
+    icon: "📊", cat: "Tools", date: "January 2026", read: "5 min read",
+    body: `<p>Running paid ads without a budget calculator is like driving with your eyes closed. Our free AdMetrics tool helps you plan every penny before you spend a single one.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">AdMetrics — Free Ad Budget Planner</h2>
+<p>The free <a href="https://byshak.github.io/admetrics" style="color:var(--orange);font-weight:700;" target="_blank">AdMetrics tool</a> covers Meta Ads, TikTok Ads and Google Ads. Enter your budget and it calculates:</p>
+<ul style="padding-left:1.5rem;margin:0.8rem 0;">
+<li>Expected ROAS (Return on Ad Spend)</li>
+<li>Break-even point</li>
+<li>Cost per result estimate</li>
+<li>6-month revenue forecast</li>
+<li>Daily, weekly and monthly budget breakdown</li>
+</ul>
+<p>Supports 10 currencies including GBP, USD, EUR, AED, PKR and more. Available in 6 languages. No signup required.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">Who Is This For</h2>
+<p>Perfect for ecommerce sellers, freelancers, marketing managers and small business owners who want to plan their ad spend without hiring an expensive agency.</p>`
+  },
+  6: {
+    title: "How to Automate Your Business Without Writing Any Code",
+    icon: "⚡", cat: "Guide", date: "January 2026", read: "7 min read",
+    body: `<p>Most business owners waste 3-5 hours every day on repetitive tasks that could be automated. The good news: you do not need to write a single line of code.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">AutoSpark — Free Automation Ideas Generator</h2>
+<p>Our free <a href="https://byshak.github.io/autospark" style="color:var(--orange);font-weight:700;" target="_blank">AutoSpark tool</a> generates personalised automation ideas based on your exact role and workflow. It covers Zapier, Make, AI tools, social media automation, email and ecommerce.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">Most Popular Automations in 2026</h2>
+<p><strong>For ecommerce sellers:</strong> Auto-send order confirmation and shipping emails, sync inventory to spreadsheets, auto-post new products to social media.</p>
+<p><strong>For freelancers:</strong> Auto-send invoice reminders, create Notion tasks from emails, auto-backup files to Google Drive.</p>
+<p><strong>For content creators:</strong> Auto-post to multiple platforms, auto-resize videos for different platforms, schedule posts in advance.</p>
+<p>AutoSpark is free and requires no API key — just select your role, tools and goal and it generates 8 personalised ideas instantly.</p>`
+  },
+  7: {
+    title: "5 Free Tools Every Freelancer Should Be Using in 2026",
+    icon: "💼", cat: "Tips", date: "January 2026", read: "6 min read",
+    body: `<p>Freelancing in 2026 is more competitive than ever. The freelancers winning are the ones using smart free tools to work faster and smarter. Here are the five you need today.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">1. AutoSpark — Automate Your Workflow</h2>
+<p>Stop doing repetitive tasks manually. AutoSpark generates personalised automation ideas for your exact workflow. Free at byshak.github.io/autospark.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">2. AdMetrics — Price Your Services Better</h2>
+<p>Use the ad budget calculator to show clients the ROI of their spend. Makes you look more professional. Free at byshak.github.io/admetrics.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">3. VisaGuide — Check Visa Requirements for Client Trips</h2>
+<p>Working with international clients and need to travel? Check requirements instantly. Free at byshak.github.io/visaguide.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">4. ClipForge — Repurpose Your Content</h2>
+<p>Turn your webinars, tutorials and demos into TikTok and LinkedIn clips. Free at byshak.github.io/clipforge.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">5. BillSplit Pro — Split Expenses with Clients</h2>
+<p>When you share costs with clients or collaborators, split them fairly and professionally. Free at byshak.github.io/billsplit.</p>`
+  },
+  8: {
+    title: "Best Verified Discount Codes This Week — All Working",
+    icon: "🏷️", cat: "Deals", date: "Updated weekly", read: "3 min read",
+    body: `<p>We verify every discount code before listing it. Here are the best working codes this week across the top tools and platforms.</p>
+<h2 style="font-size:1.2rem;font-weight:800;margin:1.5rem 0 0.6rem;">Working Codes This Week</h2>
+<p>🛒 <strong>Shopify</strong> — Code: <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">FLECTO3FREE</strong> — 3 months for £1/month</p>
+<p>🎨 <strong>Canva Pro</strong> — Code: <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">CANVAFLECTO</strong> — 45% off annual plan</p>
+<p>💚 <strong>Fiverr</strong> — Code: <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">FLECTO10</strong> — 10% off first order</p>
+<p>🌐 <strong>Hostinger</strong> — Code: <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">FLECTOHOST</strong> — 75% off hosting</p>
+<p>📊 <strong>SEMrush</strong> — Code: <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">FLECTOSEO</strong> — 17% off annual</p>
+<p>🔒 <strong>NordVPN</strong> — Code: <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">FLECTOVPN</strong> — 67% off 2-year plan</p>
+<p>✍️ <strong>Grammarly</strong> — Code: <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">FLECTOGRAM</strong> — 20% off Premium</p>
+<p>📝 <strong>Notion</strong> — Code: <strong style="background:#fff3ef;padding:0.2rem 0.5rem;border-radius:4px;color:var(--orange);">NOTIONFLECTO</strong> — 6 months free</p>
+<p style="margin-top:1rem;font-size:0.82rem;color:#666;">All codes verified as of this week. Codes may expire — always check the expiry date shown on the deal. <a href="../index.html" style="color:var(--orange);font-weight:700;">See all deals on Flecto →</a></p>`
+  },
+};
+
+function showArticle(id) {
+  const art = ARTICLE_CONTENT[id];
+  if (!art) return;
+  document.getElementById('articleContent').innerHTML = \`
+    <div style="font-size:3rem;margin-bottom:1rem;text-align:center;">\${art.icon}</div>
+    <div style="font-size:0.7rem;font-weight:700;color:var(--orange);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;">\${art.cat}</div>
+    <h1 style="font-size:1.5rem;font-weight:800;letter-spacing:-0.03em;line-height:1.2;margin-bottom:0.8rem;">\${art.title}</h1>
+    <div style="font-size:0.72rem;color:#999;font-weight:600;margin-bottom:1.8rem;display:flex;gap:0.8rem;">\${art.date} · \${art.read}</div>
+    <div style="font-size:0.9rem;">\${art.body}</div>
+    <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #e4e4e4;text-align:center;">
+      <a href="../index.html" style="display:inline-block;padding:0.75rem 2rem;background:var(--orange);color:#fff;border-radius:50px;font-weight:700;font-size:0.85rem;text-decoration:none;">← Back to Flecto</a>
+    </div>
+  \`;
+  document.getElementById('articleModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeArticle() {
+  document.getElementById('articleModal').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('articleModal').addEventListener('click', function(e){
+  if(e.target===this) closeArticle();
+});
 </script>
 </body>
 </html>
