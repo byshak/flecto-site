@@ -6,6 +6,11 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://flecto.shop/blog.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://flecto.shop/about.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
