@@ -1,0 +1,23 @@
+{
+  "name": "Flecto — Free Tools & Best Deals",
+  "short_name": "Flecto",
+  "description": "Free tools hub and deals finder. No signup required.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#f03f00",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
