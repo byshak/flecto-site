@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Online Tools — Flecto.shop | 7 Tools, Zero Cost</title>
+  <meta name="description" content="7 free online tools built for creators, entrepreneurs, and parents. Bill splitter, visa checker, ad metrics calculator, mood tracker, and more.">
+  <link rel="canonical" href="https://flecto.shop/free-tools.html">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8L68G38RCL"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8L68G38RCL');</script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6235620771940621" crossorigin="anonymous"></script>
+  <!-- Schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Free Online Tools","description":"7 free tools for creators, entrepreneurs and parents","url":"https://flecto.shop/free-tools.html","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"BillSplit Pro","url":"https://byshak.github.io/billsplit"},{"@type":"ListItem","position":2,"name":"AdMetrics","url":"https://byshak.github.io/admetrics"},{"@type":"ListItem","position":3,"name":"ClipForge","url":"https://byshak.github.io/clipforge"},{"@type":"ListItem","position":4,"name":"VisaGuide","url":"https://byshak.github.io/visaguide"},{"@type":"ListItem","position":5,"name":"AutoSpark","url":"https://byshak.github.io/autospark"},{"@type":"ListItem","position":6,"name":"MoodSpace","url":"https://byshak.github.io/moodspace"},{"@type":"ListItem","position":7,"name":"ProductSpy","url":"https://byshak.github.io/productspy"}]}}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{
+      --orange:#f03f00;--orange-hover:#ff5722;--orange-light:#fff3ef;--orange-border:#ffc9b8;
+      --bg:#f5f5f5;--white:#ffffff;--border:#e4e4e4;--text:#111111;--muted:#666666;
+      --radius:12px;
+    }
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+    /* NAV */
+    nav{background:#fff;border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;position:sticky;top:0;z-index:100;}
+    .nav-inner{max-width:1140px;width:100%;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;}
+    .logo{font-weight:800;font-size:1.2rem;color:var(--text);text-decoration:none;}
+    .logo span{color:var(--orange);}
+    .nav-links{display:flex;align-items:center;gap:6px;list-style:none;}
+    .nav-links a{text-decoration:none;color:var(--text);font-size:.9rem;font-weight:500;padding:6px 10px;border-radius:8px;transition:background .2s;}
+    .nav-links a:hover,.nav-links a.active{background:var(--orange-light);color:var(--orange);}
+    .nav-cta{background:var(--orange);color:#fff!important;padding:8px 16px!important;border-radius:8px!important;}
+    .nav-cta:hover{background:var(--orange-hover)!important;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
+    .hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:.3s;}
+    @media(max-width:768px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:12px 20px;gap:4px;}
+      .nav-links.open{display:flex;}
+      .hamburger{display:flex;}
+    }
+    /* HERO */
+    .hero{background:#fff;border-bottom:1px solid var(--border);padding:60px 20px 50px;}
+    .hero-inner{max-width:700px;margin:0 auto;text-align:center;}
+    .badge{display:inline-flex;align-items:center;gap:6px;background:var(--orange-light);color:var(--orange);border:1px solid var(--orange-border);border-radius:50px;padding:6px 14px;font-size:.82rem;font-weight:600;margin-bottom:20px;}
+    .hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:800;line-height:1.15;margin-bottom:14px;}
+    .hero h1 span{color:var(--orange);}
+    .hero p{font-size:1.05rem;color:var(--muted);max-width:520px;margin:0 auto;}
+    /* STATS */
+    .stats-row{display:flex;justify-content:center;gap:32px;margin-top:36px;flex-wrap:wrap;}
+    .stat{text-align:center;}
+    .stat strong{display:block;font-size:1.6rem;font-weight:800;color:var(--text);}
+    .stat span{font-size:.82rem;color:var(--muted);}
+    /* TOOLS GRID */
+    .section{max-width:1140px;margin:0 auto;padding:60px 20px;}
+    .section-title{font-size:1.5rem;font-weight:800;margin-bottom:8px;}
+    .section-sub{color:var(--muted);margin-bottom:32px;font-size:.95rem;}
+    .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;}
+    .tool-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column;gap:14px;}
+    .tool-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.08);transform:translateY(-2px);}
+    .tool-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;}
+    .tool-category{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);}
+    .tool-card h2{font-size:1.1rem;font-weight:700;margin:0;}
+    .tool-card p{color:var(--muted);font-size:.9rem;flex:1;margin:0;}
+    .tool-tags{display:flex;flex-wrap:wrap;gap:6px;}
+    .tag{background:var(--bg);border:1px solid var(--border);border-radius:50px;padding:3px 10px;font-size:.75rem;color:var(--muted);font-weight:500;}
+    .tool-btn{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:#fff;text-decoration:none;padding:10px 18px;border-radius:8px;font-size:.88rem;font-weight:600;transition:background .2s;margin-top:4px;align-self:flex-start;}
+    .tool-btn:hover{background:var(--orange-hover);}
+    /* orange icon bg */
+    .ic-orange{background:var(--orange-light);}
+    .ic-blue{background:#eef3ff;}
+    .ic-green{background:#edfaf4;}
+    .ic-purple{background:#f3f0ff;}
+    /* FAQ */
+    .faq-section{max-width:760px;margin:0 auto;padding:0 20px 80px;}
+    .faq-section h2{font-size:1.4rem;font-weight:800;margin-bottom:24px;}
+    .faq-item{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:10px;}
+    .faq-q{padding:18px 20px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;}
+    .faq-q:hover{background:var(--orange-light);}
+    .faq-a{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s,padding .3s;font-size:.93rem;color:var(--muted);background:#fff;}
+    .faq-a.open{max-height:200px;padding:0 20px 18px;}
+    /* FOOTER */
+    footer{background:#fff;border-top:1px solid var(--border);padding:40px 20px;}
+    .footer-inner{max-width:1140px;margin:0 auto;display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;}
+    .footer-brand{flex:1;min-width:200px;}
+    .footer-brand .logo{font-size:1.1rem;}
+    .footer-brand p{color:var(--muted);font-size:.85rem;margin-top:8px;max-width:240px;}
+    .footer-col h4{font-size:.85rem;font-weight:700;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;}
+    .footer-col a{display:block;color:var(--muted);text-decoration:none;font-size:.85rem;margin-bottom:6px;}
+    .footer-col a:hover{color:var(--orange);}
+    .footer-bottom{max-width:1140px;margin:24px auto 0;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:.82rem;color:var(--muted);}
+    /* COOKIE */
+    #cookie-banner{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:14px 20px;border-radius:12px;font-size:.85rem;display:flex;align-items:center;gap:14px;z-index:999;max-width:600px;width:calc(100% - 40px);box-shadow:0 8px 32px rgba(0,0,0,.2);}
+    #cookie-banner button{background:var(--orange);color:#fff;border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.83rem;font-weight:600;white-space:nowrap;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">flecto<span>.</span>shop</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">🔧 Tools</a></li>
+      <li><a href="/blog.html">📝 Blog</a></li>
+      <li><a href="/free-tools.html" class="active">⚡ All Tools</a></li>
+      <li><a href="/discount-codes.html">🏷️ Deals</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/#newsletter" class="nav-cta">Get Deals</a></li>
+    </ul>
+    <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge">⚡ 100% Free — No Sign-Up Required</div>
+    <h1>7 Free Tools for <span>Creators &amp; Entrepreneurs</span></h1>
+    <p>Built to save you time and money. Works offline. No accounts, no paywalls, no nonsense.</p>
+    <div class="stats-row">
+      <div class="stat"><strong>7</strong><span>Free Tools</span></div>
+      <div class="stat"><strong>9+</strong><span>Currencies</span></div>
+      <div class="stat"><strong>70+</strong><span>Countries (Visa)</span></div>
+      <div class="stat"><strong>0</strong><span>Signups Needed</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="section">
+  <div class="section-title">All Free Tools</div>
+  <p class="section-sub">Click any tool to open it in a new tab — all tools are hosted separately and open instantly.</p>
+  <div class="tools-grid">
+
+    <div class="tool-card">
+      <div class="tool-icon ic-orange">💸</div>
+      <div class="tool-category">Finance</div>
+      <h2>BillSplit Pro</h2>
+      <p>Split bills fairly with friends in 9 currencies. Works completely offline — no internet needed after load.</p>
+      <div class="tool-tags">
+        <span class="tag">Offline</span><span class="tag">9 Currencies</span><span class="tag">Free</span>
+      </div>
+      <a href="https://byshak.github.io/billsplit" target="_blank" rel="noopener" class="tool-btn">Open Tool →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon ic-blue">📊</div>
+      <div class="tool-category">Marketing</div>
+      <h2>AdMetrics</h2>
+      <p>Calculate your ad ROAS, budget efficiency, and forecast results before you spend a single dollar.</p>
+      <div class="tool-tags">
+        <span class="tag">ROAS</span><span class="tag">Ad Budget</span><span class="tag">Forecast</span>
+      </div>
+      <a href="https://byshak.github.io/admetrics" target="_blank" rel="noopener" class="tool-btn">Open Tool →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon ic-orange">🎬</div>
+      <div class="tool-category">Content Creation</div>
+      <h2>ClipForge</h2>
+      <p>AI-powered video clip tool for TikTok creators. Turn long videos into short viral clips in minutes.</p>
+      <div class="tool-tags">
+        <span class="tag">AI</span><span class="tag">TikTok</span><span class="tag">Video</span>
+      </div>
+      <a href="https://byshak.github.io/clipforge" target="_blank" rel="noopener" class="tool-btn">Open Tool →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon ic-green">🌍</div>
+      <div class="tool-category">Travel</div>
+      <h2>VisaGuide</h2>
+      <p>Check visa requirements for 70+ countries instantly. Plan your international travel without the confusion.</p>
+      <div class="tool-tags">
+        <span class="tag">70+ Countries</span><span class="tag">Visa</span><span class="tag">Travel</span>
+      </div>
+      <a href="https://byshak.github.io/visaguide" target="_blank" rel="noopener" class="tool-btn">Open Tool →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon ic-purple">🤖</div>
+      <div class="tool-category">Productivity</div>
+      <h2>AutoSpark</h2>
+      <p>AI automation ideas generator. Discover workflows and automations you can build to save hours each week.</p>
+      <div class="tool-tags">
+        <span class="tag">AI</span><span class="tag">Automation</span><span class="tag">Ideas</span>
+      </div>
+      <a href="https://byshak.github.io/autospark" target="_blank" rel="noopener" class="tool-btn">Open Tool →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon ic-orange">😊</div>
+      <div class="tool-category">Wellness</div>
+      <h2>MoodSpace</h2>
+      <p>Daily mood tracker that works offline. Log your emotions, spot patterns, and understand yourself better.</p>
+      <div class="tool-tags">
+        <span class="tag">Offline</span><span class="tag">Wellness</span><span class="tag">Daily</span>
+      </div>
+      <a href="https://byshak.github.io/moodspace" target="_blank" rel="noopener" class="tool-btn">Open Tool →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon ic-blue">🔍</div>
+      <div class="tool-category">E-commerce</div>
+      <h2>ProductSpy</h2>
+      <p>AI winning product finder for dropshippers and e-commerce sellers. Discover what's trending before everyone else.</p>
+      <div class="tool-tags">
+        <span class="tag">AI</span><span class="tag">Dropshipping</span><span class="tag">Trends</span>
+      </div>
+      <a href="https://byshak.github.io/productspy" target="_blank" rel="noopener" class="tool-btn">Open Tool →</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- AdSense -->
+<div style="text-align:center;padding:0 20px 40px;">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6235620771940621" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<div class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Are these tools really free? <span>+</span></div>
+    <div class="faq-a">Yes, 100% free with no hidden costs, no sign-up required, and no credit card needed. All 7 tools are free to use forever.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Do the tools work offline? <span>+</span></div>
+    <div class="faq-a">BillSplit Pro and MoodSpace work completely offline after the initial load. The other tools need an internet connection for AI features.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Is my data stored or shared? <span>+</span></div>
+    <div class="faq-a">No. All tools run in your browser. We don't store, collect, or share any data you enter into the tools.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggleFaq(this)">Will there be more tools added? <span>+</span></div>
+    <div class="faq-a">Yes! We regularly add new tools. Subscribe to our newsletter to get notified when new tools launch.</div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are these tools really free?","acceptedAnswer":{"@type":"Answer","text":"Yes, 100% free with no hidden costs, no sign-up required, and no credit card needed."}},{"@type":"Question","name":"Do the tools work offline?","acceptedAnswer":{"@type":"Answer","text":"BillSplit Pro and MoodSpace work completely offline after the initial load."}},{"@type":"Question","name":"Is my data stored or shared?","acceptedAnswer":{"@type":"Answer","text":"No. All tools run in your browser. We don't store, collect, or share any data."}},{"@type":"Question","name":"Will there be more tools added?","acceptedAnswer":{"@type":"Answer","text":"Yes! We regularly add new tools. Subscribe to our newsletter to get notified."}}]}
+</script>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="logo">flecto<span style="color:var(--orange)">.</span>shop</a>
+      <p>Free tools and deals for creators, entrepreneurs, and parents.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <a href="https://byshak.github.io/billsplit" target="_blank">BillSplit Pro</a>
+      <a href="https://byshak.github.io/admetrics" target="_blank">AdMetrics</a>
+      <a href="https://byshak.github.io/clipforge" target="_blank">ClipForge</a>
+      <a href="https://byshak.github.io/visaguide" target="_blank">VisaGuide</a>
+      <a href="https://byshak.github.io/autospark" target="_blank">AutoSpark</a>
+    </div>
+    <div class="footer-col">
+      <h4>Deals</h4>
+      <a href="/discount-codes.html">All Deals</a>
+      <a href="/discount-codes/shopify.html">Shopify Code</a>
+      <a href="/discount-codes/canva.html">Canva Code</a>
+      <a href="/discount-codes/nordvpn.html">NordVPN Code</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/about.html">About</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Flecto.shop — All rights reserved</span>
+    <span>Made with ❤️ in Pakistan</span>
+  </div>
+</footer>
+
+<div id="cookie-banner" style="display:none;">
+  <span>🍪 We use cookies to improve your experience. <a href="/privacy-policy.html" style="color:#f03f00;">Learn more</a></span>
+  <button onclick="acceptCookies()">Accept</button>
+</div>
+
+<script>
+function toggleFaq(el){
+  const a=el.nextElementSibling;
+  const isOpen=a.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(x=>{x.classList.remove('open');x.previousElementSibling.querySelector('span').textContent='+';});
+  if(!isOpen){a.classList.add('open');el.querySelector('span').textContent='−';}
+}
+function acceptCookies(){localStorage.setItem('cookie_ok','1');document.getElementById('cookie-banner').style.display='none';}
+if(!localStorage.getItem('cookie_ok'))document.getElementById('cookie-banner').style.display='flex';
+</script>
+</body>
+</html>
